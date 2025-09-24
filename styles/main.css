@@ -254,7 +254,7 @@ footer p {
     margin: 0;
 }
 
-/* Animação que faz o rodapé ondular */
+/* Key frames serve para dar animações */
 @keyframes wave-effect {
     0%, 100% { transform: rotateZ(-1deg) translateX(-5px); }
     50% { transform: rotateZ(1deg) translateX(5px); }
