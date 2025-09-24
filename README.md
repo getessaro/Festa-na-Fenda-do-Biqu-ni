@@ -5,11 +5,11 @@ Este projeto é um convite de aniversário web **interativo e animado**, criado 
 na Fenda do Buiquíni. O objetivo pricipal foi aplicar e aprofundar os conhecimentos em animações **CSS** usando **@Keyframes**, criando uma experiência visual divertida e envolvente.
 
 <div align="center">
-<img src="assets2/
-
-
-
-
+<img src="assets2/AbertaBOB.jpeg"
+width="400" alt"Abertura BOB" >
+<img src="assets2/InicioBOB.jpeg" 
+width="600" alt"Inicial BOB">
+</div> 
 
 
 🛠️ **Tecnologias Usadas**
