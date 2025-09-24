@@ -32,6 +32,6 @@ width="600" alt"Inicial BOB">
 
 
 Para visualizar o projeto, basta abrir o arquivo index.html no seu navegador web ou no GitPages. **Não é necessário nenhuma instalação ou configuração adicional**. <p> 
-Link do GitPages:
+Link do GitPages:  https://getessaro.github.io/Festa-na-Fenda-do-Biqu-ni/
 
 👩‍💻 Feito por Geovana Tessaro 💫
