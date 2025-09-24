@@ -1,0 +1,299 @@
+body{ 
+  background-image:  linear-gradient(to right, #00c6ff, #0072ff);
+  color:rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin:0;
+}
+header h1 {
+   font-size: 2.5em;
+   color: yellow;
+   text-shadow: 2px 2px 4px #000000;
+   text-align: center;
+}
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Container para os cards dos personagens */
+.personagens-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+/* Estilos para o card do personagem */
+.personagem-card {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px; /* Bordas arredondadas para o card */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semitransparente padrão */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+/* Estilos para as imagens dos personagens */
+.personagem-card img {
+    width: 150px; /* Define uma largura fixa */
+    height: 150px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 50%; /* Deixa as imagens redondas, como bolhas! */
+    border: 3px solid yellow; /* Adiciona uma borda amarela */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.personagem-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para a imagem da localização */
+#Localizacao img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    margin-top: 15px; /* Adiciona um espaço acima da imagem */
+}
+
+/* Cores individuais para as bordas dos personagens */
+.personagem-card[data-nome="Bob Esponja"] {
+    background-color: #fffacd; /* Amarelo bem clarinho (LemonChiffon) */
+}
+.personagem-card[data-nome="Bob Esponja"] img {    
+    border-color: #FFD700; /* Amarelo Dourado */
+}
+
+.personagem-card[data-nome="Patrick"] {
+    background-color: #ffc0cb; /* Rosa claro (Pink) */
+}
+.personagem-card[data-nome="Patrick"] img {
+    border-color: #FF69B4; /* Rosa Choque */
+}
+
+.personagem-card[data-nome="Lula Molusco"] {
+    background-color: #b0e0e6; /* Azul claro (PowderBlue) */
+}
+.personagem-card[data-nome="Lula Molusco"] img {
+    border-color: #87CEEB; /* Azul Céu */
+}
+
+.personagem-card[data-nome="Plankton"] {
+    background-color: #98fb98; /* Verde claro (PaleGreen) */
+}
+.personagem-card[data-nome="Plankton"] img {
+    border-color: #32CD32; /* Verde Lima */
+}
+
+.personagem-card[data-nome="Sirigueijo"] {
+    background-color: #f08080; /* Vermelho claro (LightCoral) */
+}
+.personagem-card[data-nome="Sirigueijo"] img {
+    border-color: #DC143C; /* Vermelho Carmesim */
+}
+
+/* --- Estilos para os Botões --- */
+
+/* Estilo para o botão Veja o que vai rolar! */
+button {
+    background-color: #FFD700; /* Amarelo do Bob Esponja */
+    color: #003366; /* Azul escuro para o texto dentro do botão */
+    border: 2px solid #003366; /* Borda azul escura */
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px; /* Bordas bem arredondadas, como bolhas */
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Efeito do botão "Veja o que vai rolar!" ao passar o mouse */
+button:hover {
+    background-color: #ffeb3b; /* Amarelo mais claro ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de "saltar" */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para os botões de fechar dos personagens */
+#btn-fechar, #btn-fechar-agenda {
+    background-color: #ff6347; /* Cor para o botão */
+    border-color: #a52a2a; /* Marrom avermelhado para borda */
+    color: white; /* Cor do texto */
+}
+
+/* --- Estilos para o Modal de Informações e Agenda --- */
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo do modal que aparece ao clicar no personagem */
+#InfoPersonagem {
+    position: fixed; /* Fica fixo na tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o elemento */
+    background-color: #0072ff; /* Azul do tema */
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 5px solid #FFD700; /* Borda amarela */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* Garante que fique na frente de tudo */
+    width: 80%;
+    max-width: 500px; /* Largura máxima */
+    text-align: center;
+}
+
+
+/* Estilo para a seção da Agenda */
+#Agenda {
+    background-color: rgba(0, 51, 102, 0.3); /* Fundo azul escuro semitransparente */
+    padding: 20px;
+
+    border-radius: 15px;
+    margin-top: 30px;
+    border: 2px solid #FFD700;
+}
+
+#Agenda ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    color: white;
+    text-align: left;
+}
+
+/* --- Animação de Bolhas no Fundo --- */
+
+.bubbles-container {
+    position: fixed; /* Fica fixo na tela, mesmo com rolagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o container atrás de todo o conteúdo */
+    overflow: hidden; /* Esconde as bolhas que saem da tela */
+}
+
+.bubbles-container span {
+    position: absolute;
+    bottom: -100px; /* Começa fora da tela, na parte de baixo */
+    background-color: rgba(255, 255, 255, 0.702); /* Cor branca semitransparente */
+    border-radius: 50%;
+    animation: rise 20s infinite; /* Aplica a animação 'rise' */
+}
+
+/* Variações de tamanho, posição e velocidade para cada bolha */
+.bubbles-container span:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    left: 10%;
+    animation-duration: 12s;
+}
+.bubbles-container span:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 25%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+.bubbles-container span:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+.bubbles-container span:nth-child(4) {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    animation-duration: 20s;
+}
+.bubbles-container span:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+/* A animação que faz as bolhas subirem */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh); /* Move a bolha para cima, para fora da tela */
+        opacity: 0;
+    }
+}
+
+/* --- Estilos e Animação para o Rodapé --- */
+
+footer {
+    background-color: #f0e68c; /* Cor de areia (Khaki) */
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 5px solid #0072ff; /* Borda azul para simular a água */
+    transform-origin: bottom left; /* Ponto de origem da animação */
+    animation: wave-effect 5s ease-in-out infinite; /* Aplica a animação */
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #a0522d; /* Cor de madeira molhada (Sienna) */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+    margin: 0;
+}
+
+/* Animação que faz o rodapé ondular */
+@keyframes wave-effect {
+    0%, 100% { transform: rotateZ(-1deg) translateX(-5px); }
+    50% { transform: rotateZ(1deg) translateX(5px); }
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Para tablets e telas menores (até 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .personagem-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #Agenda ul {
+        text-align: center;
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #InfoPersonagem {
+        width: 90%;
+    }
+}
