@@ -2,7 +2,7 @@
 🌟 **Sobre o projeto** 
 
 Este projeto é um convite de aniversário web **interativo e animado**, criado como parte do meu aprendizado em um bootcamp de desenvolvimento frontend. Inpirado no universo de **Bob Esponja**, ele convida os amigos para uma celebração inesquecível
-na Fenda do Buiquíni. O objetivo pricipal foi aplicar e aprofundar os conhecimentos em animações **CSS** usando **@Keyframes**, criando uma experiência visual divertida e envolvente.
+na Fenda do Biquíni. O objetivo pricipal foi aplicar e aprofundar os conhecimentos em animações **CSS** usando **@Keyframes**, criando uma experiência visual divertida e envolvente.
 
 <div align="center">
 <img src="assets2/AbertaBOB.jpeg"
